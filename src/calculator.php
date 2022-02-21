@@ -19,7 +19,24 @@
             $result = $x + $y;
         } elseif($_POST["calc"] == "-"){
             $result = $x - $y;
+        } elseif($_POST["calc"] == '*'){<?php 
+    if(isset($_POST["calc"])){
+        echo "naman";
+        $x = $_POST["num1"];
+        $y = $_POST["num2"];
+        //console($_POST["calc"]);
+        if($_POST["calc"] == '+'){
+            $result = $x + $y;
+        } elseif($_POST["calc"] == "-"){
+            $result = $x - $y;
         } elseif($_POST["calc"] == '*'){
+            $result = $x * $y;
+        } else {
+            $result = $x / $y;
+        }
+    echo 'result <input style="margin-left: 28px;" type="text" value="$result" ><br>';
+ }
+?> 
             $result = $x * $y;
         } else {
             $result = $x / $y;
